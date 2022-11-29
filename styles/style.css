@@ -40,6 +40,10 @@ img {
   
 }
 
+nav {
+  display: grid;
+}
+
 html {
   font-family: Roboto;
 }
@@ -57,7 +61,7 @@ header {
     padding-top: 20px;
     padding-bottom: 10px;
     width: auto;
-    height: 60px;
+    height: auto;
   }
   
   .location {
@@ -179,6 +183,15 @@ header {
   box-shadow:  0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
+.nouveau {
+  position:absolute;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  color: #2d7e69;
+  padding: .25rem .5rem;
+  margin-top: 1rem;
+  right: 2rem;
+}
 .image {
   height: 175px;
   object-fit: cover;
@@ -188,12 +201,47 @@ header {
 
 }
 
+.heart {
+  width: 1.5rem;
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
+  overflow: visible;
+
+}
+
+.heart:hover {
+  animation:fade-animation 1s ease-in-out forwards ;
+  fill: #ff79da;
+  transition: fill 1s ease;
+}
+
+@keyframes fade-animation{
+  
+  0%{
+    
+    transform: scale(1);
+
+  }
+
+  75%{
+    
+    transform: scale(1.1);
+  }
+  100%{
+    
+    transform: scale(1);
+
+  }
+}
+
 footer {
-  background-color: darkgray;
+  background-color: rgb(53, 53, 53);
   color: white;
   padding: 1rem;
 }
 
 footer h3 {
   font-family: shrikhand;
+  font-weight: 400;
 }
