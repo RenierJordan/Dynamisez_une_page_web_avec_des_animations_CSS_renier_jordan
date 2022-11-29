@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenierJordan/Dynamisez_une_page_web_avec_des_animations_CSS_renier_jordan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RenierJordan/Dynamisez_une_page_web_avec_des_animations_CSS_renier_jordan/issues"
+  },
+  "homepage": "https://github.com/RenierJordan/Dynamisez_une_page_web_avec_des_animations_CSS_renier_jordan#readme"
+}
