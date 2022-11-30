@@ -7,10 +7,13 @@
 }
 
 .slide-left {
-    width: 2rem;
+    width: 5rem;
     height: 100%;
     padding: 0;
     background-color: green;
+    //margin-left: 0;
+
+    margin-right: -5rem;
 }
 
 .menu {
@@ -37,14 +40,23 @@
 
     &__tile{
         display: flex;
-        justify-content: space-between;
+        overflow: hidden;
         background-color: white;
         border-radius: 1rem;
-        padding: .5rem;
+        
         line-height: 1.5rem;
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 
+        [class*="menu__tile"]{
+            padding: .5rem;
+        }
+        &-prixdesc {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+        }
         &-prix{
+            border: 2px solid red;
             align-self: flex-end;
         }
         &:hover {
@@ -61,10 +73,12 @@
 
 @keyframes slide-left {
     0% {
-      transform: translateX(0);
+      
+      //transform: translateX(0);
     }
     100% {
-      transform: translateX(-50px);
+        margin-right: 0%;
+      //transform: translateX(-50px);
     }
   }
 
