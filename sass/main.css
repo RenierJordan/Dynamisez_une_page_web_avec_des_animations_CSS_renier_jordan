@@ -135,7 +135,17 @@ svg {
   align-self: flex-end;
 }
 .menu__tile:hover .slide-left {
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
 }
 
 @keyframes slide-left {
@@ -177,7 +187,8 @@ svg {
 }
 .card__image {
   height: 175px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card__coeur {
   place-self: center;
@@ -192,8 +203,21 @@ svg {
 }
 .card__heart :hover {
   stroke: none;
-  animation: heart-animation 1s ease-in-out forwards;
+  -webkit-animation: heart-animation 1s ease-in-out forwards;
+          animation: heart-animation 1s ease-in-out forwards;
   fill: url(#gradient);
+}
+
+@-webkit-keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes heart-animation {
@@ -208,6 +232,8 @@ svg {
   }
 }
 .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   min-width: 150px;
   position: relative;
@@ -331,6 +357,4 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 1rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

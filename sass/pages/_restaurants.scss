@@ -1,0 +1,74 @@
+@use '../abstracts/colors' as *;
+
+.image-bg {
+    position: relative;
+    z-index: -1;
+    margin-bottom: -3rem;
+}
+
+.slide-left {
+    width: 2rem;
+    height: 100%;
+    padding: 0;
+    background-color: green;
+}
+
+.menu {
+    padding: 1rem;
+    background-color: $grey-400 ;
+    border-radius: 2rem  2rem 0 0;
+    //position: ;
+
+    &__restaurant {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+    &__carte{
+        display: grid;
+        gap: 2rem;
+
+        article {
+            display: grid;
+            gap: 1rem;
+            
+        }
+    }
+
+    &__tile{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 1rem;
+        padding: .5rem;
+        line-height: 1.5rem;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+
+        &-prix{
+            align-self: flex-end;
+        }
+        &:hover {
+            .slide-left{
+                
+                animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            
+        }
+    }
+
+   
+}
+
+@keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+
+.cmd {
+    display: flex;
+    justify-content: center;
+}

@@ -1,8 +1,10 @@
 @use 'pages/home'; 
+@use 'pages/restaurants';
 @use 'components/card';
 @use 'components/buttons';
 @use 'layout/footer.scss';
 @use 'layout/header.scss';
+
 
 html,
 body,
@@ -37,6 +39,7 @@ select {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
 }

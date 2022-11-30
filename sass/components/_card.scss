@@ -1,3 +1,12 @@
+@use '../abstracts/colors' as *;
+
+.main-stop {
+    stop-color: $primary;
+}
+.alt-stop {
+    stop-color: $secondary;
+}
+
 .card {
     background-color: white;
     overflow: hidden;
@@ -19,18 +28,21 @@
         height: 175px;
         object-fit: cover;
       }
-
+      &__coeur{
+        place-self: center;
+      }
       &__heart {
         width: 1.5rem;
+        height: 2rem;
         fill: transparent;
         stroke: black;
         stroke-width: 20;
         overflow: visible;
 
         :hover {
-            animation: heart-animation 1s ease-in-out forwards;
-            fill: #ff79da;
-            transition: fill 1s ease;
+          stroke: none;
+          animation: heart-animation 1s ease-in-out forwards;
+          fill: url(#gradient);
         }
       }
   }
@@ -41,22 +53,11 @@
       transform: scale(1);
     }
   
-    75% {
+    50% {
       transform: scale(1.1);
     }
     100% {
       transform: scale(1);
     }
   }
-  
-  footer {
-    background-color: rgb(53, 53, 53);
-    color: white;
-    padding: 1rem;
-  
-    h3 {
-      font-family: shrikhand;
-      font-weight: 400;
-    }
-  }
-  
+
