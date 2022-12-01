@@ -1,0 +1,31 @@
+@keyframes slide-left {
+    0% {
+      
+      //transform: translateX(0);
+    }
+    100% {
+        margin-right: 0%;
+      //transform: translateX(-50px);
+    }
+  }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes appear {
+  0%{
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

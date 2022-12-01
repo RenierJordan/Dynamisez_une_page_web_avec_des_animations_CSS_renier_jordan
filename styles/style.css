@@ -91,18 +91,51 @@ svg {
   margin: 1rem;
 }
 
+@keyframes slide-left {
+  100% {
+    margin-right: 0%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .image-bg {
   position: relative;
   z-index: -1;
   margin-bottom: -3rem;
+  max-height: 19rem;
+  object-fit: cover;
 }
 
 .slide-left {
-  width: 5rem;
+  display: grid;
+  place-items: center;
+  width: 4rem;
   height: 100%;
   padding: 0;
-  background-color: green;
-  margin-right: -5rem;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+}
+.slide-left i {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.25rem;
+  color: #99e2d0;
 }
 
 .menu {
@@ -119,11 +152,22 @@ svg {
   display: grid;
   gap: 2rem;
 }
-.menu__carte article {
+.menu__carte :nth-child(2) {
+  animation-delay: 500ms;
+}
+.menu__carte :nth-child(3) {
+  animation-delay: 750ms;
+}
+.menu__carte :nth-child(4) {
+  animation-delay: 1000ms;
+}
+.menu__category {
   display: grid;
   gap: 1rem;
 }
 .menu__tile {
+  animation: appear 1s;
+  animation-fill-mode: both;
   display: flex;
   overflow: hidden;
   background-color: white;
@@ -138,20 +182,26 @@ svg {
   display: flex;
   justify-content: space-between;
   flex: 1;
+  overflow: hidden;
+}
+.menu__tile-desc {
+  overflow: hidden;
+}
+.menu__tile-desc > * {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__tile-prix {
-  border: 2px solid red;
   align-self: flex-end;
 }
 .menu__tile:hover .slide-left {
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.menu__tile:hover .fa-check {
+  animation: rotate 0.5s linear;
 }
 
-@keyframes slide-left {
-  100% {
-    margin-right: 0%;
-  }
-}
 .cmd {
   display: flex;
   justify-content: center;

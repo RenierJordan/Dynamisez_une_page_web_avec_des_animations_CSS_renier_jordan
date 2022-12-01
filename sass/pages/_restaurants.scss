@@ -1,26 +1,35 @@
 @use '../abstracts/colors' as *;
+@use '../abstracts/animations' as *;
 
 .image-bg {
     position: relative;
     z-index: -1;
     margin-bottom: -3rem;
+    max-height: 19rem;
+    object-fit: cover;
 }
 
 .slide-left {
-    width: 5rem;
+    display: grid;
+    place-items: center;
+    width: 4rem;
     height: 100%;
     padding: 0;
-    background-color: green;
-    //margin-left: 0;
-
-    margin-right: -5rem;
+    background-color: $tertiary;
+    margin-right: -4rem;
+    i {
+        border-radius: 50%;
+        background-color: white;
+        padding: .25rem;
+        color: $tertiary;
+    }
 }
 
 .menu {
     padding: 1rem;
     background-color: $grey-400 ;
     border-radius: 2rem  2rem 0 0;
-    //position: ;
+    
 
     &__restaurant {
     width: 100%;
@@ -30,39 +39,63 @@
     &__carte{
         display: grid;
         gap: 2rem;
-
-        article {
-            display: grid;
-            gap: 1rem;
-            
+        @for $i from 2 to 5 {
+        :nth-child(#{$i}) {
+            animation-delay: 250ms * $i;       
         }
     }
+    }
+        
+    &__category {
+        display: grid;
+        gap: 1rem;
+
+        
+    }
+    
+
 
     &__tile{
+        animation: appear 1s ;        
+        animation-fill-mode: both;
         display: flex;
         overflow: hidden;
+        
         background-color: white;
         border-radius: 1rem;
         
         line-height: 1.5rem;
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 
+        
         [class*="menu__tile"]{
             padding: .5rem;
         }
         &-prixdesc {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between;           
             flex: 1;
+            overflow: hidden;
+        }
+        &-desc{
+            overflow: hidden;
+            > * {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
         }
         &-prix{
-            border: 2px solid red;
             align-self: flex-end;
         }
         &:hover {
             .slide-left{
                 
-                animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: slide-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+
+            .fa-check{
+                animation: rotate .5s linear;
             }
             
         }
@@ -71,16 +104,7 @@
    
 }
 
-@keyframes slide-left {
-    0% {
-      
-      //transform: translateX(0);
-    }
-    100% {
-        margin-right: 0%;
-      //transform: translateX(-50px);
-    }
-  }
+
 
 .cmd {
     display: flex;
