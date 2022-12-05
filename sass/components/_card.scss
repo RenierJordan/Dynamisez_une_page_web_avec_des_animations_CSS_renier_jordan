@@ -17,7 +17,7 @@
     &__nouveau {
         position: absolute;
         border-radius: 2px;
-        background-color: #99e2d0;
+        background-color: $tertiary;
         color: #2d7e69;
         padding: 0.25rem 0.5rem;
         margin-top: 1rem;
@@ -31,33 +31,9 @@
       &__coeur{
         place-self: center;
       }
-      &__heart {
-        width: 1.5rem;
-        height: 2rem;
-        fill: transparent;
-        stroke: black;
-        stroke-width: 20;
-        overflow: visible;
-
-        :hover {
-          stroke: none;
-          animation: heart-animation 1s ease-in-out forwards;
-          fill: url(#gradient);
-        }
-      }
+      
   }
   
 
-@keyframes heart-animation {
-    0% {
-      transform: scale(1);
-    }
-  
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
 

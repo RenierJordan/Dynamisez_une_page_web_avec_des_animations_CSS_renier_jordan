@@ -91,6 +91,17 @@ svg {
   margin: 1rem;
 }
 
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes slide-left {
   100% {
     margin-right: 0%;
@@ -114,6 +125,22 @@ svg {
     opacity: 1;
   }
 }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header a {
+  position: absolute;
+  left: 1rem;
+}
+header .logo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: auto;
+  height: auto;
+}
+
 .image-bg {
   position: relative;
   z-index: -1;
@@ -147,6 +174,7 @@ svg {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 .menu__carte {
   display: grid;
@@ -164,6 +192,11 @@ svg {
 .menu__category {
   display: grid;
   gap: 1rem;
+}
+.menu__category-underline {
+  width: 2.5rem;
+  height: 2px;
+  background-color: #99e2d0;
 }
 .menu__tile {
   animation: appear 1s;
@@ -238,31 +271,7 @@ svg {
 .card__coeur {
   place-self: center;
 }
-.card__heart {
-  width: 1.5rem;
-  height: 2rem;
-  fill: transparent;
-  stroke: black;
-  stroke-width: 20;
-  overflow: visible;
-}
-.card__heart :hover {
-  stroke: none;
-  animation: heart-animation 1s ease-in-out forwards;
-  fill: url(#gradient);
-}
 
-@keyframes heart-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .btn {
   width: fit-content;
   min-width: 150px;
@@ -315,11 +324,55 @@ footer .fa-solid {
   margin-right: 0.25rem;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/* Restaurants pages typography */
+.menu__restaurant h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+.menu__carte {
+  font-size: 14px;
+}
+.menu__carte h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.menu__category h2 {
+  font-size: 18px;
+  transform: "";
+}
+.menu__tile h3, .menu__tile p, .menu__tile span {
+  font-size: 0.9rem;
+}
+
+.heart {
+  width: 1.5rem;
+  height: 2rem;
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
+  overflow: visible;
+}
+.heart :hover {
+  stroke: none;
+  animation: heart-animation 1s ease-in-out forwards;
+  fill: url(#gradient);
 }
 
 html,
@@ -368,17 +421,6 @@ img {
 
 nav {
   display: grid;
-}
-
-html {
-  font-family: Roboto;
-}
-
-.logo {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  width: auto;
-  height: auto;
 }
 
 .flex-group {

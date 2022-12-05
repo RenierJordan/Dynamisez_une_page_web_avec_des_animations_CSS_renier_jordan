@@ -1,0 +1,14 @@
+.heart {
+    width: 1.5rem;
+    height: 2rem;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 20;
+    overflow: visible;
+
+    :hover {
+      stroke: none;
+      animation: heart-animation 1s ease-in-out forwards;
+      fill: url(#gradient);
+    }
+  }

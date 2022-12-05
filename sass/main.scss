@@ -4,6 +4,8 @@
 @use 'components/buttons';
 @use 'layout/footer.scss';
 @use 'layout/header.scss';
+@use 'base/typography';
+@use 'components/heart';
 
 
 html,
@@ -51,19 +53,6 @@ img {
 nav {
   display: grid;
 }
-
-html {
-  font-family: Roboto;
-}
-
-
-.logo {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  width: auto;
-  height: auto;
-}
-
 
 .flex-group {
   display: flex;

@@ -91,17 +91,114 @@ svg {
   margin: 1rem;
 }
 
+@-webkit-keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes slide-left {
+  100% {
+    margin-right: 0%;
+  }
+}
+@keyframes slide-left {
+  100% {
+    margin-right: 0%;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header a {
+  position: absolute;
+  left: 1rem;
+}
+header .logo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: auto;
+  height: auto;
+}
+
 .image-bg {
   position: relative;
   z-index: -1;
   margin-bottom: -3rem;
+  max-height: 19rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slide-left {
-  width: 2rem;
+  display: grid;
+  place-items: center;
+  width: 4rem;
   height: 100%;
   padding: 0;
-  background-color: green;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+}
+.slide-left i {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.25rem;
+  color: #99e2d0;
 }
 
 .menu {
@@ -113,49 +210,74 @@ svg {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 .menu__carte {
   display: grid;
   gap: 2rem;
 }
-.menu__carte article {
+.menu__carte :nth-child(2) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+.menu__carte :nth-child(3) {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.menu__carte :nth-child(4) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.menu__category {
   display: grid;
   gap: 1rem;
 }
+.menu__category-underline {
+  width: 2.5rem;
+  height: 2px;
+  background-color: #99e2d0;
+}
 .menu__tile {
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   display: flex;
-  justify-content: space-between;
+  overflow: hidden;
   background-color: white;
   border-radius: 1rem;
-  padding: 0.5rem;
   line-height: 1.5rem;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+.menu__tile [class*=menu__tile] {
+  padding: 0.5rem;
+}
+.menu__tile-prixdesc {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  overflow: hidden;
+}
+.menu__tile-desc {
+  overflow: hidden;
+}
+.menu__tile-desc > * {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__tile-prix {
   align-self: flex-end;
 }
 .menu__tile:hover .slide-left {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.menu__tile:hover .fa-check {
+  -webkit-animation: rotate 0.5s linear;
+          animation: rotate 0.5s linear;
 }
 
-@-webkit-keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
-}
 .cmd {
   display: flex;
   justify-content: center;
@@ -193,44 +315,7 @@ svg {
 .card__coeur {
   place-self: center;
 }
-.card__heart {
-  width: 1.5rem;
-  height: 2rem;
-  fill: transparent;
-  stroke: black;
-  stroke-width: 20;
-  overflow: visible;
-}
-.card__heart :hover {
-  stroke: none;
-  -webkit-animation: heart-animation 1s ease-in-out forwards;
-          animation: heart-animation 1s ease-in-out forwards;
-  fill: url(#gradient);
-}
 
-@-webkit-keyframes heart-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes heart-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -285,11 +370,56 @@ footer .fa-solid {
   margin-right: 0.25rem;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/* Restaurants pages typography */
+.menu__restaurant h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+.menu__carte {
+  font-size: 14px;
+}
+.menu__carte h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.menu__category h2 {
+  font-size: 18px;
+  transform: "";
+}
+.menu__tile h3, .menu__tile p, .menu__tile span {
+  font-size: 0.9rem;
+}
+
+.heart {
+  width: 1.5rem;
+  height: 2rem;
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
+  overflow: visible;
+}
+.heart :hover {
+  stroke: none;
+  -webkit-animation: heart-animation 1s ease-in-out forwards;
+          animation: heart-animation 1s ease-in-out forwards;
+  fill: url(#gradient);
 }
 
 html,
@@ -338,17 +468,6 @@ img {
 
 nav {
   display: grid;
-}
-
-html {
-  font-family: Roboto;
-}
-
-.logo {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  width: auto;
-  height: auto;
 }
 
 .flex-group {

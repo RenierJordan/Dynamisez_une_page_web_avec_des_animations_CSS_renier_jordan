@@ -1,5 +1,6 @@
 @use '../abstracts/colors' as *;
 @use '../abstracts/animations' as *;
+@use '../layout/header.scss' as *;
 
 .image-bg {
     position: relative;
@@ -35,6 +36,7 @@
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
     &__carte{
         display: grid;
@@ -50,6 +52,11 @@
         display: grid;
         gap: 1rem;
 
+        &-underline{
+            width: 2.5rem;
+            height: 2px;
+            background-color: $tertiary;
+        }
         
     }
     

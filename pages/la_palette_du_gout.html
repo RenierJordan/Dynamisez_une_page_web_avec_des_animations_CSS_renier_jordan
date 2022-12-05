@@ -20,15 +20,16 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div>
-          <img
-            src="../assets/images/logo/ohmyfood@2x.svg"
-            alt="ohmyfood_logo"
-            class="logo"
-          />
-        </div>
-      </nav>
+      <a href="../index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <div>
+        <img
+          src="../assets/images/logo/ohmyfood@2x.svg"
+          alt="ohmyfood_logo"
+          class="logo"
+        />
+      </div>     
     </header>
 
     <main>
@@ -40,9 +41,9 @@
 
       <section class="menu">
         <div class="menu__restaurant">
-          <h2>La palette du gout</h2>
+          <h1>La palette du gout</h1>
           <svg
-            class="card__heart"
+            class="heart"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             title="heart"
@@ -59,7 +60,10 @@
         </div>
         <div class="menu__carte">
           <article class="menu__category">
-            <p>Entrées</p>
+            <div>
+              <h2>Entrées</h2>
+              <div class="menu__category-underline"></div>
+            </div>
             <div class="menu__tile">
               <div class="menu__tile-prixdesc">
                 <div class="menu__tile-desc">
@@ -99,7 +103,10 @@
             </div>
           </article>
           <article class="menu__category">
-            <p>Plats</p>
+            <div>
+              <h2>Plats</h2>
+              <div class="menu__category-underline"></div>
+            </div>
             <div class="menu__tile">
               <div class="menu__tile-prixdesc">
                 <div class="menu__tile-desc">
@@ -139,7 +146,10 @@
             </div>
           </article>
           <article class="menu__category">
-            <p>Desserts</p>
+            <div>
+              <h2>Desserts</h2>
+              <div class="menu__category-underline"></div>
+            </div>
             <div class="menu__tile">
               <div class="menu__tile-prixdesc">
                 <div class="menu__tile-desc">
@@ -199,7 +209,7 @@
           Devenir partenaire
         </a>
         <a href="#"> Mentions légales </a>
-        <a href="#"> Contact </a>
+        <a href="mailto:contact@ohmyfood.com"> Contact </a>
       </nav>
     </footer>
   </body>

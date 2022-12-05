@@ -1,6 +1,16 @@
 header {
-    display: flex;
-    flex-direction: column;
+    display: flex;   
     align-items: center;
     justify-content: center;
+
+    a {
+      position: absolute;
+      left: 1rem;
+    }
+    .logo {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      width: auto;
+      height: auto;
+    }
   }

@@ -1,0 +1,46 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+
+/* Restaurants pages typography */
+.menu{
+    &__restaurant h1 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+    }
+
+    &__carte {
+        font-size: 14px;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: normal;  
+        }
+    }
+
+    &__category h2 {
+        font-size: 18px;
+        transform: to-upper-case($string: "");
+    }
+
+    &__tile  {
+        h3, p, span {
+            font-size: 0.9rem;
+        }
+
+    }
+}
