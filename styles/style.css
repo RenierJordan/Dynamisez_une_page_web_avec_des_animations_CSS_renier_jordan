@@ -24,7 +24,7 @@ svg {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-radius: 50%;
-  animation: spin 3s infinite linear;
+  animation: spin 3s linear;
 }
 .loader__dot {
   background-color: #99e2d0;
@@ -164,7 +164,7 @@ svg {
   50% {
     opacity: 0.9;
   }
-  90% {
+  99% {
     opacity: 0;
     transform: scale(1);
   }
