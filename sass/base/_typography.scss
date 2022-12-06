@@ -27,14 +27,13 @@ h3 {
         font-size: 14px;
 
         h2 {
-            text-transform: uppercase;
             font-weight: normal;  
         }
     }
 
     &__category h2 {
         font-size: 18px;
-        transform: to-upper-case($string: "");
+        text-transform: uppercase;
     }
 
     &__tile  {

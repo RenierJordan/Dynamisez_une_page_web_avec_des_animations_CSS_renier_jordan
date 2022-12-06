@@ -133,15 +133,12 @@ svg {
   }
 }
 @keyframes slide-left {
-  100% {
+  to {
     margin-right: 0%;
   }
 }
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -406,12 +403,11 @@ h3 {
   font-size: 14px;
 }
 .menu__carte h2 {
-  text-transform: uppercase;
   font-weight: normal;
 }
 .menu__category h2 {
   font-size: 18px;
-  transform: "";
+  text-transform: uppercase;
 }
 .menu__tile h3, .menu__tile p, .menu__tile span {
   font-size: 0.9rem;
