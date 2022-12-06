@@ -316,6 +316,14 @@ header .logo {
   place-self: center;
 }
 
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
 .btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -468,12 +476,4 @@ img {
 
 nav {
   display: grid;
-}
-
-.flex-group {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 1rem;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,15 @@
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 1rem 1rem 2rem;
+  line-height: 1.5rem;
+}
+footer h3 {
+  margin: 1rem auto;
+  font-family: shrikhand;
+  font-weight: 400;
+}
+footer .fa-solid {
+  width: 1rem;
+  margin-right: 0.25rem;
+}/*# sourceMappingURL=footer.css.map */

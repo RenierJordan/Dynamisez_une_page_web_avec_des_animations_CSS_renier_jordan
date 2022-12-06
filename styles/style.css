@@ -3,6 +3,36 @@ svg {
   height: 20px;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 2;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0.9;
+  animation: disappear 3s forwards;
+}
+.loader__border {
+  display: grid;
+  place-items: center;
+  height: 50px;
+  width: 50px;
+  border-top: 5px solid #9356dc;
+  border-bottom: 5px solid #ff79da;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 3s infinite linear;
+}
+.loader__dot {
+  background-color: #99e2d0;
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+
 .location {
   display: flex;
   flex-direction: row;
@@ -123,6 +153,24 @@ svg {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  50% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
   }
 }
 header {
@@ -270,6 +318,14 @@ header .logo {
 }
 .card__coeur {
   place-self: center;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem;
 }
 
 .btn {
@@ -421,14 +477,6 @@ img {
 
 nav {
   display: grid;
-}
-
-.flex-group {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
