@@ -1,0 +1,27 @@
+@media screen {
+    @media (min-width: 800px){
+        #Fonctionnement {
+            text-align: center;
+
+        }
+        #restaurants  {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1em 1em;
+
+           h2 {
+            text-align: center;
+           }
+        }
+
+
+
+        footer {
+            text-align: center;
+        }
+    }
+    
+}
