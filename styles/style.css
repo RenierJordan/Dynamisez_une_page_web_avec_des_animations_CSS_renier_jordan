@@ -260,6 +260,9 @@ header .logo {
 .menu__carte :nth-child(4) {
   animation-delay: 1000ms;
 }
+.menu__carte :nth-child(5) {
+  animation-delay: 1250ms;
+}
 .menu__category {
   display: grid;
   gap: 1rem;
@@ -274,6 +277,7 @@ header .logo {
   animation-fill-mode: both;
   display: flex;
   overflow: hidden;
+  max-height: 80px;
   background-color: white;
   border-radius: 1rem;
   line-height: 1.5rem;
@@ -520,6 +524,12 @@ nav {
   }
   footer {
     text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .menu__carte {
+    display: flex;
+    justify-content: center;
   }
 }
 
