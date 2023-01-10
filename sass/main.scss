@@ -1,10 +1,5 @@
-@use 'pages/home'; 
-@use 'pages/restaurants';
-@use 'components/card';
-@use 'components/buttons';
-@use 'layout/footer.scss';
-@use 'layout/header.scss';
-@use 'base/typography';
-@use 'components/heart';
-@use 'base/reset';
-@use 'base/media';
+@use 'abstracts';
+@use 'pages'; 
+@use 'components';
+@use 'layout';
+@use 'base';

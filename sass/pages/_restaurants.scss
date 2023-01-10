@@ -1,6 +1,5 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/animations' as *;
-@use '../layout/header.scss' as *;
+@use '../abstracts/' as *;
+@use '../layout/' as *;
 
 .image-bg {
     position: relative;
