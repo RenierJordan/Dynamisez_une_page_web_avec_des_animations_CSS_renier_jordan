@@ -40,7 +40,7 @@
     &__carte{
         display: grid;
         gap: 2rem;
-        @for $i from 2 to 6 {
+        @for $i from 2 to 5 {
         :nth-child(#{$i}) {
             animation-delay: 250ms * $i;       
         }
