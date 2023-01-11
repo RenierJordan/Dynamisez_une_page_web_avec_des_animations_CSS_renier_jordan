@@ -1,6 +1,5 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/animations' as *;
-@use '../layout/header.scss' as *;
+@use '../abstracts/' as *;
+@use '../layout/' as *;
 
 .image-bg {
     position: relative;
@@ -67,7 +66,7 @@
         animation-fill-mode: both;
         display: flex;
         overflow: hidden;
-        
+        max-height: 80px;
         background-color: white;
         border-radius: 1rem;
         

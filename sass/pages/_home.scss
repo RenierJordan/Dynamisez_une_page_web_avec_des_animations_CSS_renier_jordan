@@ -1,4 +1,4 @@
-@use '../abstracts/colors' as *;
+@use '../abstracts/' as *;
 
 svg {
   width: 20px;
@@ -82,19 +82,38 @@ svg {
   }
 
   #Fonctionnement {
-    padding: 2rem 0 ;
-    margin: 1rem;
-    display: grid;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em 3em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    padding-left: 1em;
+
+      h2 {
+        width: 100%;
+      }
   }
   
   .tile {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    min-width: 300px;
+    max-width: 385px;
+    position: relative;
+    font-weight: 700;
+    border-radius: 22px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 20%);
     background-color: $grey-400;
-    border-radius: 1rem;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem 1rem;
-    gap: 1rem;
+    
 
     &:hover {
       background-color: $tilehover;
@@ -104,7 +123,7 @@ svg {
     }
 
     svg {
-      padding-left: 2rem;
+      padding-right: 1rem;
     }
   }
 
@@ -119,13 +138,23 @@ svg {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 5px;
+    left: -15px;
   }
 
   #restaurants {
     background-color: $grey-400;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em 1em;
+
+      h2 {
+        width: 100%;
+      }
   }
   
   #restaurants > * {

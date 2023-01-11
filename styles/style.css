@@ -74,19 +74,36 @@ svg {
 }
 
 #Fonctionnement {
-  padding: 2rem 0;
-  margin: 1rem;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em 3em;
+  padding-top: 2em;
+  padding-bottom: 3em;
+  padding-left: 1em;
+}
+#Fonctionnement h2 {
+  width: 100%;
 }
 
 .tile {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  min-width: 300px;
+  max-width: 385px;
+  position: relative;
+  font-weight: 700;
+  border-radius: 22px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
   background-color: #f7f7f7;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 1rem;
-  gap: 1rem;
 }
 .tile:hover {
   background-color: #F5EDFF;
@@ -95,7 +112,7 @@ svg {
   fill: #9356dc;
 }
 .tile svg {
-  padding-left: 2rem;
+  padding-right: 1rem;
 }
 
 .numero {
@@ -108,13 +125,22 @@ svg {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 5px;
+  left: -15px;
 }
 
 #restaurants {
   background-color: #f7f7f7;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em 1em;
+}
+#restaurants h2 {
+  width: 100%;
 }
 
 #restaurants > * {
@@ -234,6 +260,9 @@ header .logo {
 .menu__carte :nth-child(4) {
   animation-delay: 1000ms;
 }
+.menu__carte :nth-child(5) {
+  animation-delay: 1250ms;
+}
 .menu__category {
   display: grid;
   gap: 1rem;
@@ -248,6 +277,7 @@ header .logo {
   animation-fill-mode: both;
   display: flex;
   overflow: hidden;
+  max-height: 80px;
   background-color: white;
   border-radius: 1rem;
   line-height: 1.5rem;
@@ -294,10 +324,12 @@ header .logo {
 }
 
 .card {
+  position: relative;
   background-color: white;
   overflow: hidden;
   border-radius: 1rem;
   height: 250px;
+  width: 335px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 .card__nouveau {
@@ -306,8 +338,8 @@ header .logo {
   background-color: #99e2d0;
   color: #2d7e69;
   padding: 0.25rem 0.5rem;
-  margin-top: 1rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
 }
 .card__image {
   height: 175px;
@@ -473,6 +505,32 @@ img {
 
 nav {
   display: grid;
+}
+
+@media screen and (min-width: 800px) {
+  #Fonctionnement {
+    text-align: center;
+  }
+  #restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em 1em;
+  }
+  #restaurants h2 {
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .menu__carte {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
