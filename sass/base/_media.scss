@@ -1,5 +1,5 @@
 @media screen {
-    @media (min-width: 800px){
+    @media (min-width: 782px){
         #Fonctionnement {
             text-align: center;
 
@@ -24,13 +24,15 @@
         }
     }
 
-    @media (min-width: 1100px){
+    @media (min-width: 1150px){
         
          .menu__carte {
             display: flex;
             justify-content: center;      
         }
-
+        .menu__tile {
+            width: 350px;
+        }
     }
 
     
